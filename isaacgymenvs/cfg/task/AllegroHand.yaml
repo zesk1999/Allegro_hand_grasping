@@ -22,38 +22,31 @@ env:
   actionsMovingAverage: 1.0
   controlFrequencyInv: 2 # 30 Hz
 
-  startPositionNoise: 0.01
-  startRotationNoise: 0.0
+  startPositionNoise: 0.015
+  startRotationNoise: 0.015
 
-  resetPositionNoise: 0.01
-  resetRotationNoise: 0.0
+  resetPositionNoise: 0.015
+  resetRotationNoise: 0.015
   resetDofPosRandomInterval: 0.2
   resetDofVelRandomInterval: 0.0
 
-  startObjectPoseDY: -0.19
-  startObjectPoseDZ: 0.06
-
   # Random forces applied to the object
-  forceScale: 0.0
-  forceProbRange: [0.001, 0.1]
-  forceDecay: 0.99
+  forceScale: 30.0
+  forceDecay: 1
   forceDecayInterval: 0.08
 
   # reward -> dictionary
-  distRewardScale: -10.0
-  rotRewardScale: 1.0
-  rotEps: 0.1
-  actionPenaltyScale: -0.0002
-  reachGoalBonus: 250
-  fallDistance: 0.24
-  fallPenalty: 0.0
+  actionPenaltyScale: -4
+  reachGoalBonus: 100
+  fallDistance: 0.255
+  fallPenalty: -16
+  graspRewardScale: 4.0
 
   objectType: "block" # can be block, egg or pen
   observationType: "full_state" # can be "no_vel", "full_state"
   asymmetric_observations: False
-  successTolerance: 0.1
   printNumSuccesses: False
-  maxConsecutiveSuccesses: 0
+  maxConsecutiveSuccesses: 4
 
   asset:
     assetFileName: "urdf/kuka_allegro_description/allegro_touch_sensor.urdf"
@@ -177,4 +170,4 @@ sim:
     bounce_threshold_velocity: 0.2
     max_depenetration_velocity: 1000.0
     default_buffer_size_multiplier: 5.0
-    contact_collection: 0 # 0: CC_NEVER (don't collect contact info), 1: CC_LAST_SUBSTEP (collect only contacts on last substep), 2: CC_ALL_SUBSTEPS (broken - do not use!)
+    contact_collection: 1 # 0: CC_NEVER (don't collect contact info), 1: CC_LAST_SUBSTEP (collect only contacts on last substep), 2: CC_ALL_SUBSTEPS (broken - do not use!)

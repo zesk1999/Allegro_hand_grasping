@@ -674,6 +674,7 @@ class ShadowHand(VecTask):
         # if only goals need reset, then call set API
         if len(goal_env_ids) > 0 and len(env_ids) == 0:
             self.reset_target_pose(goal_env_ids, apply_reset=True)
+
         # if goals need reset in addition to other envs, call set API in reset_idx()
         elif len(goal_env_ids) > 0:
             self.reset_target_pose(goal_env_ids)

@@ -29,7 +29,6 @@
 import copy
 import random
 
-
 def mutate_float(x, change_min=1.1, change_max=1.5):
     perturb_amount = random.uniform(change_min, change_max)
 

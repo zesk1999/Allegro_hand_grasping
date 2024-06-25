@@ -1,4 +1,3 @@
-
 # Copyright (c) 2018-2023, NVIDIA Corporation
 # All rights reserved.
 #
@@ -158,6 +157,3 @@ if __name__ == "__main__":
     x = torch.tensor(torch.randn(num_envs, 16).to(RNA.device))
     y = RNA(x)
     import ipdb; ipdb.set_trace()
-
-    
-

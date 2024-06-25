@@ -1,6 +1,3 @@
-# train.py
-# Script to train policies in Isaac Gym
-#
 # Copyright (c) 2018-2023, NVIDIA Corporation
 # All rights reserved.
 #
@@ -213,7 +210,6 @@ def launch_rlg_hydra(cfg: DictConfig):
         'checkpoint': cfg.checkpoint,
         'sigma': cfg.sigma if cfg.sigma != '' else None
     })
-
 
 if __name__ == "__main__":
     launch_rlg_hydra()

@@ -8,7 +8,7 @@ experiment: ''
 num_envs: ''
 
 # seed - set to -1 to choose random seed
-seed: 42
+seed: -1
 # set to True for deterministic performance
 torch_deterministic: False
 
@@ -45,7 +45,7 @@ wandb_activate: False
 wandb_group: ''
 wandb_name: ${train.params.config.name}
 wandb_entity: ''
-wandb_project: 'isaacgymenvs'
+wandb_project: 'Thesis'
 wandb_tags: []
 wandb_logcode_dir: '' 
 
@@ -59,7 +59,7 @@ headless: False
 
 # set default task and default training config based on task
 defaults:
-  - task: Ant
+  - task: AllegroHand
   - train: ${task}PPO
   - pbt: no_pbt
   - override hydra/job_logging: disabled
@@ -70,4 +70,3 @@ hydra:
   output_subdir: null
   run:
     dir: .
-

@@ -28,7 +28,6 @@
 
 import torch
 
-
 class ReplayBuffer():
     def __init__(self, buffer_size, device):
         self._head = 0
