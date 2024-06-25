@@ -88,7 +88,7 @@ Where the `--nproc_per_node=` flag specifies how many processes to run and note 
 ## Population Based Training
 
 You can run population based training to help find good hyperparameters or to train on very difficult environments which would otherwise
-be hard to learn anything on without it. See [the readme](docs/pbt.md) for details.
+be hard to learn anything on without it.
 
 
 ## WandB support
